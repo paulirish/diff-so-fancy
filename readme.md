@@ -86,7 +86,7 @@ Pull requests quite welcome.
 # fork and clone the repo. then…
 
 git submodule update --init
-brew install entr
+brew install entr coreutils
 # install bats: github.com/sstephenson/bats#installing-bats-from-source
 ```
 
@@ -94,7 +94,7 @@ brew install entr
 # Run the test suite once:
 bats test/diff-so-fancy.bats
 
-# Run it on every change
+# Run it on every change with `entr`
 ls --color=never diff-so-fancy test/*.bats | entr bats test/*.bats
 ```
 
