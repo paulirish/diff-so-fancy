@@ -84,9 +84,10 @@ Pull requests quite welcome.
 
 ```sh
 # fork and clone the repo. then…
+
 git submodule update --init
 brew install entr
-# install bats
+# install bats: github.com/sstephenson/bats#installing-bats-from-source
 ```
 
 ```sh
