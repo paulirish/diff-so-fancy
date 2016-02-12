@@ -5,7 +5,7 @@ load 'test_helper/bats-assert/load'
 load 'test_helper/util'
 
 
-# save to output ourselves as bats fails to handle our multiline result
+# bats fails to handle our multiline result, so we save to $output ourselves
 output=$( load_fixture "ls-function" | $diff_so_fancy )
 
 @test "diff-so-fancy runs exits without error" {
