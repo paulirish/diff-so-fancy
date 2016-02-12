@@ -1,0 +1,14 @@
+machine:
+  environment:
+
+
+dependencies:
+  pre:
+  	- apt-get install coreutils
+  post:
+#   - add-apt-repository ppa:duggan/bats --yes
+    - git clone --depth 1 https://github.com/sstephenson/bats.git
+
+test:
+  override:
+    - bats/bin/bats test/*.bats
